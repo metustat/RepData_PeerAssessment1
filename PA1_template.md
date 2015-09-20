@@ -105,6 +105,7 @@ From the plot above, we can see that the biggest average of steps taken accross 
 max_steps_inteval <- interval_data[which(max(select(interval_data, mean)) == select(interval_data, mean)),1]
 max_steps_inteval
 ```
+[1] 835
 
 So, 835th interval has the maximum average of steps taken. In other words, 8:35 - 8:40 time interval has the maximum average of steps taken across all days. We can assume, that this interval indicates the time when everyone goes to school, university or work and having the maximum average steps is quite reasonable.
 
@@ -140,10 +141,17 @@ g3 <- g3 + theme(text = element_text(size = 15, face = "italic"), axis.title = e
 g3 <- g3 + labs(x = "Total number of steps", y = "Frequency")
 g3 <- g3 + theme_bw()
 g3
+```
 
+```{r, echo = TRUE}
 mean(select(new_data_date, Total_Number)[,1], na.rm = T)
+```
+[1] 10766.19
+
+```{r, echo = TRUE}
 median(select(new_data_date, Total_Number)[,1], na.rm = T)
 ```
+[1] 10766.19
 
 ![Plot 3](figure/plot3.png) 
 
