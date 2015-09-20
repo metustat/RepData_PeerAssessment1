@@ -57,7 +57,7 @@ g1 <- g1 + labs(x = "Total number of steps", y = "Frequency")
 g1 <- g1 + theme_bw()
 print(g1)
 ```
-![Sample panel plot](figure/plot1.png) 
+![Plot 1](figure/plot1.png) 
 
 Adjusting for acceptable binwidth, we can see that 10000 steps occures most frequently. What this leads to is that in most of the days, the steps taken are approximately in 10000 - 11000 interval. In addition, the shape of histogram implies that the total numbers of steps are normally distributed.
 
@@ -91,6 +91,8 @@ g2 <- g2 + theme(text = element_text(size = 15, face = "italic"), axis.title = e
 g2 <- g2 + theme_bw()
 g2
 ```
+
+![Plot 2](figure/plot2.png) 
 
 From the plot above, we can see that the biggest average of steps taken accross all days is in the 07:00 - 09:00 o`clock interval. To be precise, the following shows the exact interval which has the maximum average of steps taken across all days.
 
@@ -138,6 +140,8 @@ mean(select(new_data_date, Total_Number)[,1], na.rm = T)
 median(select(new_data_date, Total_Number)[,1], na.rm = T)
 ```
 
+![Plot 3](figure/plot3.png) 
+
 Looking at the histogram and mean and median of total number of steps taken, astute one might notice that missing value imputation created an artificial band around the mean. This is, indeed, logical because you are imputing the same value and the result is fully justified. The mean and median are equal, which also states for the fact that there is similarity around the mean.
 
 And, finally, the last question of interest is related with distinguishing patterns in weekdays and weekends. Before proceeding to the answer of the question, some pre-processing steps are undertaken. They are as follows:
@@ -168,6 +172,8 @@ g4 <- g4 + scale_x_discrete(breaks = c(0, 500, 1000, 1500, 2000),
                             labels = c("00:00", "05:00", "10:00", "15:00", "20:00"))
 g4
 ```
+
+![Plot 4](figure/plot4.png) 
 
 Apparently, the plots above show that on weekdays, people are walking much more in the interval between 08:00-09:00. As we have already assummed, the plausible reason for this is that they go to schools, universities or works and therefore, the increase in number of steps taken is again sensible.
 
