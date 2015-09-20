@@ -48,7 +48,7 @@ sum_data <- group_by(data, date) %>%
 
 Then, the code below makes the histogram of total number of steps taken each day:
 
-```{r, echo = TRUE, fig.width = 8}
+```{r plot1, echo = TRUE, fig.width = 8}
 g1 <- ggplot(sum_data, aes(x = Total_Number))
 g1 <- g1 + geom_histogram(color = "black", fill = "#FF9999", binwidth = 1250)
 g1 <- g1 + labs(title = "Histogram of Total Number of steps taken each day")
