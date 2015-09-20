@@ -57,6 +57,7 @@ g1 <- g1 + labs(x = "Total number of steps", y = "Frequency")
 g1 <- g1 + theme_bw()
 print(g1)
 ```
+![Sample panel plot](figure/plot1.png) 
 
 Adjusting for acceptable binwidth, we can see that 10000 steps occures most frequently. What this leads to is that in most of the days, the steps taken are approximately in 10000 - 11000 interval. In addition, the shape of histogram implies that the total numbers of steps are normally distributed.
 
