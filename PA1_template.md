@@ -66,12 +66,12 @@ Then, the codes provided below report mean and median for total number of steps 
 ```{r, echo = TRUE}
 mean(select(sum_data, Total_Number)[,1], na.rm = T)
 ```
-##  10766.19
+[1] 10766.19
 
 ```{r, echo = TRUE}
 median(select(sum_data, Total_Number)[,1], na.rm = T)
 ```
-##  10765
+[1] 10765
 
 Apparently, as our histogram showed us, in most of the days, the steps taken are indeed in 10000-11000 interval. The mean of 10766 firmly stands for the given hypothesis. The median is not so far from the mean. This might be concluded from the rule of thumb of normal distribution. That is, if the data is normally distributed(approximately normally distributed), the mean is equal(approximately equal) to median and equal(approximately equal) to mode, which is quite obvious from the given output.
 
